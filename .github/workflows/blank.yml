@@ -17,4 +17,10 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@2.0.0
         env:
           FTP_SERVER: home562576484.1and1-d
-
+FTP_USERNAME: ${{secrets.ftp_username}}
+          FTP_PASSWORD: ${{ secrets.ftp_password }}
+          local_path: './*'
+          PORT: 22
+          METHOD: sftp
+          remote_path: '/site/IS436/lab5/'
+          sftp_only: true
